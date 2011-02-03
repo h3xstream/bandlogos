@@ -58,7 +58,6 @@ $cacheHandler->setPeriodType($type);
 $cacheHandler->setColor($color);
 
 ////Layout selection
-$layout = null;
 
 switch ($layout) {
 	case 'TwoCols':
