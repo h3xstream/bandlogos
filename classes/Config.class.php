@@ -22,7 +22,7 @@ class Config {
 	const DEFAULT_BANNER_TYPE = "overall";
 	const DEFAULT_BANNER_COLOR = "white";
 	const DEFAULT_BANNER_LAYOUT = "OneCol";
-	const NB_GENERATION_ALLOW = 4;
+	const NB_GENERATION_ALLOW = 1337;
 	
 	//Delay for browser cache (in sec.)
 	const CACHE_DELAY = 432000; //(3600 * 24 * 5)
