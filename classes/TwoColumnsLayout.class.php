@@ -5,7 +5,7 @@ include_once("util/ImageUtil.class.php");
 include_once("Config.class.php");
 
 /**
- * Generate a image with logos in two columns
+ * Generate an image with logos on two columns
  */
 class TwoColumnsLayout implements Layout {
 	private static $marginTop = 4; //Between the first logo and top

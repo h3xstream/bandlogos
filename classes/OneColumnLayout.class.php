@@ -5,7 +5,7 @@ include_once("util/ImageUtil.class.php");
 include_once("Config.class.php");
 
 /**
- * Generate a image with logos in one column
+ * Generate an image with logos on one column
  */
 class OneColumnLayout implements Layout {	
 	//Various settings
@@ -79,8 +79,6 @@ class OneColumnLayout implements Layout {
 		$currentHeight = self::$marginTop;
 		foreach($listImageRessources as $image) {
 			$widthImg = imagesx($image);
-			//echo $this->width."-2 * ".self::$marginSide);
-			//echo $widthImg."--".$expectWidth."<br/>";
 			
 			imagecopymerge($container,
 				$image,

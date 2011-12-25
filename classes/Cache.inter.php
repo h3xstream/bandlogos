@@ -27,8 +27,8 @@ interface Cache {
 	
 	/**
 	 * Ouput the result.
-	 * No content (exept header) should have been ouput before this method call.
-	 * Therefore header can still be add.
+	 * No content (except header) should have been ouput before this method call.
+	 * To allow header to be add.
 	 */
 	public function outputResult();
 }

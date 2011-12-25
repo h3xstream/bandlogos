@@ -59,7 +59,7 @@ class DatabaseCache implements Cache {
 		}
 		else { //First request : generate picture and store it in db
 			
-			//Check if number of generation is reach
+			//Check if the maximum number of generations is reach
 			
 			$sql = "SELECT count(idimage) as nbgen ".
 				"FROM lastfm_images_cache_blob ".
@@ -76,7 +76,6 @@ class DatabaseCache implements Cache {
 				}
 			}
 			
-			
 			//
 			
 			$crawler = new CrawlerLastFM();
@@ -91,7 +90,7 @@ class DatabaseCache implements Cache {
 				$this->imgGen->show();
 				ob_end_flush();
 			}
-			else {
+			else { //An invalid/block/empty account
 				throw new Exception("No artist found.");
 			}
 		}

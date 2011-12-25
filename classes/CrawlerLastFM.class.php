@@ -63,7 +63,7 @@ class CrawlerLastFM {
 	
 	/**
 	 * Get the content of the URL specified
-	 * @param string $url Path containing http://
+	 * @param string $url Path starting with http://
 	 */
 	private function request($url) {
 		switch(Config::REQUEST_METHOD) {
@@ -77,6 +77,9 @@ class CrawlerLastFM {
 		}
 	}
 	
+	/**
+	 * Require CURL extension to be install.
+	 */
 	private function requestCurl($url) {
 		$lines = array();
 		
@@ -99,6 +102,9 @@ class CrawlerLastFM {
 		return $lines;
 	}
 	
+	/**
+	 * The function fopen need to be allow. (see phpinfo)
+	 */
 	private function requestFopen($url) {
 		$lines = array();
 		$remoteRead = fopen($url, "r");
@@ -116,7 +122,9 @@ class CrawlerLastFM {
 		return $lines;
 	}
 	
-	
+	/**
+	 * The function file_get_contents need to be allow. (see phpinfo)
+	 */
 	private function requestFileGet($url) {
 		$lines = array();
 		

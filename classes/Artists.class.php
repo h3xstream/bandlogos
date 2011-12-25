@@ -2,7 +2,7 @@
 include_once("Config.class.php");
 
 /**
- * Acces the artist data
+ * Facade to acces the artist information (name and logo).
  */
 class Artists {
 	
@@ -10,7 +10,7 @@ class Artists {
 	
 	/**
 	 * @param string Name of the artist
-	 * @return Artist Infos of the artist
+	 * @return Artist Info of the artist
 	 */
 	public static function getArtistByName($name) {
 		//$db = MySQLNative::getInstance();
@@ -37,7 +37,7 @@ class Artists {
 	}
 	
 	/**
-	 * @return array List of artists
+	 * @return array Complete list of artists added
 	 */
 	public static function getListArtists() {
 		$db = Config::$dbInstance;
@@ -72,8 +72,8 @@ class Artists {
 	}
 	
 	/**
-	 * Add a artist to the list in db
-	 * @param Artist $artist Basic infos of the artist
+	 * Add an artist to the database.
+	 * @param Artist $artist Basic info of the artist
 	 */
 	public static function addArtist(Artist $artist) {
 		$db = Config::$dbInstance;
@@ -87,8 +87,9 @@ class Artists {
 	}
 	
 	/**
+	 * Load an image resource base on its name.
 	 * 
-	 * @param Artist $artist Infos of the artist
+	 * @param Artist $artist Info of the artist
 	 * @return resource Resource of the image
 	 */
 	public static function imageFromArtist(Artist $artist) {

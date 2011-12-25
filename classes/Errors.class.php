@@ -1,8 +1,7 @@
 <?php
 
 /**
- * Handle errors/exceptions.
- * Handle multiple ways to show an error. (text/image).
+ * Handle multiple ways to show errors (text/image).
  */
 class Errors {
 	
