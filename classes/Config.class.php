@@ -2,6 +2,7 @@
 //include_once("db/MySQLIDB.class.php");
 include_once("db/MySQLNative.class.php");
 
+date_default_timezone_set('America/Montreal');
 /**
  * All configuration parameters are set here.
  */

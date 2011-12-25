@@ -20,7 +20,7 @@ $image = Config::LINK_BANNER
 	"&color=".$color."&layout=".$layout;
 ?>
 
-
+<center>
 <a href="index.php">Back to index</a><br/>
 <br/>
 <b>BBCode Link:</b><br/>
@@ -29,7 +29,7 @@ $image = Config::LINK_BANNER
 <br/>
 <b>Preview:</b><br/>
 <img src="<?php echo $image ?>"><br/>
-
+</center>
 
 
 </body>
