@@ -12,3 +12,26 @@
 
 ## Adding a new layout
 Look at the *Layout* interface for detail guidelines.
+
+## Security configuration
+
+Authentication can be added to prevent unwanted calls to utility scripts.
+
+**.htaccess**
+
+Create a file with the following content.
+
+    AuthName "Restricted Area" 
+    AuthType Basic 
+    AuthUserFile /some/path/.htpasswd 
+    AuthGroupFile /dev/null 
+    
+    <Files filldb.php>
+    require valid-user
+    </Files>
+
+**.htpasswd**
+
+To create the password file use the following command.
+
+    htpasswd -c .htpasswd adminuser
