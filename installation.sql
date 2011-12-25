@@ -1,4 +1,4 @@
-CREATE TABLE `lastfm_images_cache` (
+CREATE TABLE `lastfm_images_cache_blob` (
   `idimage` int(10) unsigned NOT NULL auto_increment,
   `user` varchar(45) NOT NULL,
   `nb_artists` int(10) unsigned NOT NULL,

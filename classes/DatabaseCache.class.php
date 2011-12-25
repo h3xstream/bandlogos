@@ -49,7 +49,7 @@ class DatabaseCache implements Cache {
 		$db = Config::$dbInstance;
 		
 		$sql = "SELECT * ".
-			"FROM lastfm_images_cache ".
+			"FROM lastfm_images_cache_blob ".
 			"WHERE user = ? AND nb_artists = ? AND type = ? AND color = ? AND layout = ?";
 		$values = array($this->user,$this->nbArtists,$this->type,$this->color,$this->layout);
 		$it = $db->execQueryIterator($sql,$values);
@@ -62,7 +62,7 @@ class DatabaseCache implements Cache {
 			//Check if number of generation is reach
 			
 			$sql = "SELECT count(idimage) as nbgen ".
-				"FROM lastfm_images_cache ".
+				"FROM lastfm_images_cache_blob ".
 				"WHERE user = ?";
 			
 			$values = array($this->user);
@@ -106,7 +106,7 @@ class DatabaseCache implements Cache {
 		
 		$db = Config::$dbInstance;
 		
-		$sql = "INSERT lastfm_images_cache (user,nb_artists,type,color,layout,image) ".
+		$sql = "INSERT lastfm_images_cache_blob (user,nb_artists,type,color,layout,image) ".
 			"VALUES(?,?,?,?,?,?)";
 		$values = array($this->user,
 			$this->nbArtists,
