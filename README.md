@@ -1,4 +1,4 @@
-[BandLogos LastFM](https://github.com/h3xstream/bandlogos/blob/master/demo.png?raw=true)
+![BandLogos LastFM](https://github.com/h3xstream/bandlogos/blob/master/demo.png?raw=true)
 
 ## Installation
 1. Download the [source files](https://github.com/h3xstream/bandlogos)
